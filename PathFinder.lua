@@ -54,6 +54,9 @@ local ceil = math.ceil
 local function heuristic(nx, ny, ex, ey)
     return abs(nx - ex) + abs(ny - ey)
 end
+
+require("table.new")
+require("table.clear")
 local table_new = table.new
 local table_clear = table.clear
 local table_remove = table.remove
