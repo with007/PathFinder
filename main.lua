@@ -3,6 +3,10 @@
 -- local dbg = require("LuaPanda")
 -- dbg.start("127.0.0.1",8818)
 
-require("PathFinder")
+-- require("PathFinder")
 
-PathFinder.test(200, 200, 1000)
+-- PathFinder.test(200, 200, 1000)
+
+require("GeomotryHelper")
+
+print(GeomotryHelper.test())
