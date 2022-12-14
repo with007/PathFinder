@@ -9,4 +9,4 @@
 
 require("GeomotryHelper")
 
-print(GeomotryHelper.test())
+GeomotryHelper.test()

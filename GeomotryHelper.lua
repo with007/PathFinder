@@ -361,10 +361,15 @@ function M.SPIntersect(sectorArea, polygonArea)
 end
 local SPIntersect = M.SPIntersect
 
-function M.test()
-    local vectices = {}
-    for i = 1, 4 do
-        vectices[i] = Vector2_New(math.random(i), math.random(i))
+function M.test(count)
+    count = count or 1000
+    local start = os.clock()
+    for i = 1, count do
+        local vectices = {}
+        for i = 1, 4 do
+            vectices[i] = Vector2_New(math.random(i), math.random(i))
+        end
+        local isIntersect = SPIntersect(M.sectorArea(Vector2_New(0, 0), 1, Vector2_New(0, 0.5), 180), M.polygonArea(vectices))
     end
-    return SPIntersect(M.sectorArea(Vector2_New(0, 0), 1, Vector2_New(0, 0.5), 180), M.polygonArea(vectices))
+    print(os.clock() - start)
 end
